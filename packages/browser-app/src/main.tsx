@@ -1,7 +1,7 @@
+import { ChakraProvider } from "@chakra-ui/react";
 import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App.tsx";
-import "./index.css";
 
 const root = document.getElementById("root");
 if (!root) {
@@ -10,6 +10,8 @@ if (!root) {
 
 ReactDOM.createRoot(root).render(
 	<React.StrictMode>
-		<App />
+		<ChakraProvider>
+			<App />
+		</ChakraProvider>
 	</React.StrictMode>,
 );
